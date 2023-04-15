@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/oauth?serverTimezone=Asia/Taipei&characterEncoding=utf-8
+    username: root
+    password: secret
+    type: com.alibaba.druid.pool.DruidDataSource
+    separator: //
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

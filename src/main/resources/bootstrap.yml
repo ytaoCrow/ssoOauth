@@ -1,0 +1,12 @@
+Spring:
+  application:
+    name: ssoOauth
+  profiles:
+    active: debug
+  cloud:
+    consul:
+      host: 127.0.0.1
+      discovery:
+        prefer-ip-address: true
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}:@project.version@
+        healthCheckPath: /actuator/health
